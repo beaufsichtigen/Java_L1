@@ -8,7 +8,9 @@ public class GlavniyClass {
         Planet Neptun = new Planet ("Neptun",17, 58, null, true);
 
         System.out.println(String.format("%s: %s земных масс, %s земных объемов, %s, %s", Sun.name, Sun.Weight, Sun.Volume, Sun.typeOfObject, Sun.well_known));
+        System.out.println(String.format("%s: %s земных масс, %s земных объемов, %s, %s", SiriusA.name, SiriusA.Weight, SiriusA.Volume, SiriusA.typeOfObject, SiriusA.well_known));
         System.out.println(String.format("%s: %s земных масс, %s земных объемов, %s, %s", Earth.name, Earth.Weight, Earth.Volume, Earth.typeOfObject, Earth.well_known));
+        System.out.println(String.format("%s: %s земных масс, %s земных объемов, %s, %s", Neptun.name, Neptun.Weight, Neptun.Volume, Neptun.typeOfObject, Neptun.well_known));
 
     }
 }
