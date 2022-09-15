@@ -10,6 +10,7 @@ public class SpaceObject {
     private boolean well_known = false;
     private String name = "AnyObject";
 
+
     public int getVolume() {
         return Volume;
     }
@@ -18,7 +19,7 @@ public class SpaceObject {
         return Weight;
     }
 
-    public boolean isWell_known() {
+    public boolean getWell_known() {
         return well_known;
     }
 
@@ -26,7 +27,7 @@ public class SpaceObject {
         return name;
     }
 
-    public void setVolume(int volume) {
+    public void setVolume(int Volume) {
         if (Volume > 0) {
             this.Volume = Volume;
         } else {
@@ -36,28 +37,28 @@ public class SpaceObject {
     }
 
     public void setWeight(int Weight) {
-        if (Weight < 0) {
+        if (Weight > 0) {
             this.Weight = Weight;
         } else {
-            this.Weight = 0;
+            System.out.println("incorrect Weight");
         }
     }
 
         public void setWell_known(boolean well_known) {
-        this.well_known = well_known;
-    }
+            this.well_known = well_known;
+        }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    protected SpaceObject(String name, int Weight, int Volume, String typeOfObject, boolean well_known) {
+    protected SpaceObject() {
     System.out.println("Space object(w, v)");
-        this.name = name;
-        this.Weight = Weight;
-        this.Volume = Volume;
-        this.typeOfObject = typeOfObject;
-        this.well_known = well_known;
+        //this.name = name;
+       // this.Weight = Weight;
+       // this.Volume = Volume;
+       // this.typeOfObject = typeOfObject;
+       // this.well_known = well_known;
 
 }
 }
