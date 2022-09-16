@@ -27,10 +27,10 @@ public class GlavniyClass {
 
 
 
-        System.out.println(String.format("%s: %s земных масс, %s земных объемов, тип %s, Хорошо известно = %s", Sun.getName(), Sun.getWeight(), Sun.getVolume(), Sun.typeOfObject, Sun.getWell_known()));
-        System.out.println(String.format("%s: %s земных масс, %s земных объемов, %s, Хорошо известно = %s", SiriusA.getName(), SiriusA.getWeight(), SiriusA.getVolume(), SiriusA.typeOfObject, SiriusA.getWell_known()));
-        System.out.println(String.format("%s: %s земных масс, %s земных объемов, %s, Хорошо известно = %s", Earth.getName(), Earth.getWeight(), Earth.getVolume(), Earth.typeOfObject, Earth.getWell_known()));
-        System.out.println(String.format("%s: %s земных масс, %s земных объемов, %s, Хорошо известно = %s", Neptun.getName(), Neptun.getWeight(), Neptun.getVolume(), Neptun.typeOfObject, Neptun.getWell_known()));
+        System.out.println(String.format("%s: %s земных масс, %s земных объемов, тип %s, %s", Sun.getName(), Sun.getWeight(), Sun.getVolume(), Sun.typeOfObject, Sun.getWell_known()));
+        System.out.println(String.format("%s: %s земных масс, %s земных объемов, %s, %s", SiriusA.getName(), SiriusA.getWeight(), SiriusA.getVolume(), SiriusA.typeOfObject, SiriusA.getWell_known()));
+        System.out.println(String.format("%s: %s земных масс, %s земных объемов, %s, %s", Earth.getName(), Earth.getWeight(), Earth.getVolume(), Earth.typeOfObject, Earth.getWell_known()));
+        System.out.println(String.format("%s: %s земных масс, %s земных объемов, %s, %s", Neptun.getName(), Neptun.getWeight(), Neptun.getVolume(), Neptun.typeOfObject, Neptun.getWell_known()));
 
     }
 }
