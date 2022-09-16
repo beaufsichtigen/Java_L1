@@ -4,7 +4,7 @@ public abstract class SpaceObject {
     final public static int speed_of_light = 299792458; //м*с^-1
     final public static float gravity = 6.67430F; //(15)⋅10−11 м3·с−2·кг−1
     public static String not_well_known = "Загадочное место";
-    public static String yes_well_known = "Отлично изучена";
+    public static String yes_well_known = "Отлично изучено";
 
     private int Volume = 0;
     private int Weight;
