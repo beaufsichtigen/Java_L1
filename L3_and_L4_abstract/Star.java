@@ -1,4 +1,4 @@
-package L3;
+package L3_and_L4_abstract;
 
 public class Star extends SpaceObject {
 

@@ -1,5 +1,4 @@
-package L3;
-import L3.Planet;
+package L3_and_L4_abstract;
 
 public class GlavniyClass {
     public static void main(String[] args) {
