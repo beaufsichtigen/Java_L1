@@ -1,4 +1,4 @@
-package l2;
+package L2;
 
 public class Fibonacci {
     public static int Fibonacci(int n) {
@@ -8,9 +8,8 @@ public class Fibonacci {
             return 1;
         } else {
             return Fibonacci(n - 1) + Fibonacci(n - 2);
-        }
+         }
     }
-
     public static void main(String[] args) //распечатать n-нное число последовательности фибоначчи
     {
         int n = 8;

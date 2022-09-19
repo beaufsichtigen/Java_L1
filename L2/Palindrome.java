@@ -1,4 +1,4 @@
-package l2;
+package L2;
 
 public class Palindrome
 {

@@ -1,4 +1,4 @@
-package l3_and_l4_abstract;
+package L3_and_L4_abstract;
 
 public class GlavniyClass {
     public static void main(String[] args) {
@@ -25,16 +25,12 @@ public class GlavniyClass {
         Neptun.setWeight(-5);
         Neptun.setVolume(-10);
 
-        Planet OneMoreLevel = new OneMoreLevel();
-        OneMoreLevel.setName("Moon");
-        OneMoreLevel.setWell_known(true);
 
 
         System.out.println(String.format("%s: %s земных масс, %s земных объемов, тип %s, %s", Sun.getName(), Sun.getWeight(), Sun.getVolume(), Sun.typeOfObject, Sun.getWell_known()));
-        System.out.println(String.format("%s: %s земных масс, %s земных объемов, тип %s, %s", SiriusA.getName(), SiriusA.getWeight(), SiriusA.getVolume(), SiriusA.typeOfObject, SiriusA.getWell_known()));
-        System.out.println(String.format("%s: %s земных масс, %s земных объемов, тип %s, %s", Earth.getName(), Earth.getWeight(), Earth.getVolume(), Earth.typeOfObject, Earth.getWell_known()));
-        System.out.println(String.format("%s: %s земных масс, %s земных объемов, тип %s, %s", Neptun.getName(), Neptun.getWeight(), Neptun.getVolume(), Neptun.typeOfObject, Neptun.getWell_known()));
-        System.out.println(String.format("%s: %s земных масс, %s земных объемов, тип %s, %s", OneMoreLevel.getName(), OneMoreLevel.getWeight(), OneMoreLevel.getVolume(), OneMoreLevel.typeOfObject, OneMoreLevel.getWell_known()));
+        System.out.println(String.format("%s: %s земных масс, %s земных объемов, %s, %s", SiriusA.getName(), SiriusA.getWeight(), SiriusA.getVolume(), SiriusA.typeOfObject, SiriusA.getWell_known()));
+        System.out.println(String.format("%s: %s земных масс, %s земных объемов, %s, %s", Earth.getName(), Earth.getWeight(), Earth.getVolume(), Earth.typeOfObject, Earth.getWell_known()));
+        System.out.println(String.format("%s: %s земных масс, %s земных объемов, %s, %s", Neptun.getName(), Neptun.getWeight(), Neptun.getVolume(), Neptun.typeOfObject, Neptun.getWell_known()));
 
     }
 }

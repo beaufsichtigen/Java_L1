@@ -1,4 +1,6 @@
-package Vsyakoe.CanesVenatici.CarlHart;
+package L3.CanesVenatici.CarlHart;
 
-class CorCaroli1  {
+import L3.Star;
+
+public class CorCaroli1 extends Star {
 }

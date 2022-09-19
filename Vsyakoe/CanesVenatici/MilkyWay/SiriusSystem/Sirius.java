@@ -1,4 +1,6 @@
-package Vsyakoe.CanesVenatici.MilkyWay.SiriusSystem;
+package L3.MilkyWay.SiriusSystem;
 
-public class Sirius  {
+import L3.Star;
+
+public class Sirius extends Star {
 }

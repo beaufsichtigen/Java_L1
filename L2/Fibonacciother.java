@@ -1,4 +1,4 @@
-package l2;
+package L2;
 
 public class Fibonacciother {
     public static int Fibonacciother(int n) {
@@ -10,7 +10,6 @@ public class Fibonacciother {
             return Fibonacciother(n - 1) + Fibonacciother(n - 2);
         }
     }
-
     public static void main(String[] args)  //распечатать n чисел последовательности Фибоначчи
     {
         int n = 8;

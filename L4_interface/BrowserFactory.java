@@ -1,4 +1,4 @@
-package l4_interface;
+package L4_interface;
 
 public class BrowserFactory {
     public Browser getBrowser(String browserName) {

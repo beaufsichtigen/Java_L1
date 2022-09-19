@@ -1,9 +1,10 @@
-package l2;
+package L2;
 
 public class Sqrt {
 
     // Returns floor of square root of x
-    static int floorSqrt(int x) {
+    static int floorSqrt(int x)
+    {
         // Base cases
         if (x == 0 || x == 1)
             return x;
@@ -20,7 +21,8 @@ public class Sqrt {
     }
 
     // Input
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         int x = 252;
         System.out.print(floorSqrt(x));
     }

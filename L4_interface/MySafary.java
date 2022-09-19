@@ -1,4 +1,4 @@
-package l4_interface;
+package L4_interface;
 
 public class MySafary implements Browser {
     @Override

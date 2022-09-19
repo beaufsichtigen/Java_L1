@@ -1,4 +1,6 @@
-package Vsyakoe.CanesVenatici.MilkyWay.SolarSystem;
+package L3.MilkyWay.SolarSystem;
 
-public class Sun  {
+import L3.Star;
+
+public class Sun extends Star {
 }

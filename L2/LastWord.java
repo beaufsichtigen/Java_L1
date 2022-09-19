@@ -1,7 +1,8 @@
-package l2;
+package L2;
 
 public class LastWord {
-    public int lengthOfLastWord(final String a) {
+    public int lengthOfLastWord(final String a)
+    {
         int len = 0;
 
         String x = a.trim(); //Trim spaces before and after string
@@ -17,7 +18,8 @@ public class LastWord {
     }
 
     // Input
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         String input = "Cats love only food";
         LastWord word = new LastWord();
         System.out.println("The length of last word is " + word.lengthOfLastWord(input));

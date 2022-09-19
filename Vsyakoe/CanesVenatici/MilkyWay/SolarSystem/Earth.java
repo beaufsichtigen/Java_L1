@@ -1,4 +1,6 @@
-package Vsyakoe.CanesVenatici.MilkyWay.SolarSystem;
+package L3.MilkyWay.SolarSystem;
 
-public class Earth  {
+import L3.Planet;
+
+public class Earth extends Planet {
 }
