@@ -1,4 +1,4 @@
-package L3.CanesVenatici.EyeofSauron;
+package Vsyakoe.CanesVenatici.EyeofSauron;
 
-public class BlackHole2 {
+class BlackHole2 {
 }
