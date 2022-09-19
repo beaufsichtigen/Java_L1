@@ -1,4 +1,4 @@
-package L3_and_L4_abstract;
+package l3_and_l4_abstract;
 
 public class GlavniyClass {
     public static void main(String[] args) {

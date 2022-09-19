@@ -1,4 +1,4 @@
-package L2;
+package l2;
 
 public class Fizz {
     public static void ifFizz(int i)

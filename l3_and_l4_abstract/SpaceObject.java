@@ -1,4 +1,4 @@
-package L3_and_L4_abstract;
+package l3_and_l4_abstract;
 
 public abstract class SpaceObject {
     final public static int speed_of_light = 299792458; //м*с^-1

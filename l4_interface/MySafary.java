@@ -1,4 +1,4 @@
-package L4_interface;
+package l4_interface;
 
 public class MySafary implements Browser {
     public void start() {

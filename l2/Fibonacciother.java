@@ -1,4 +1,4 @@
-package L2;
+package l2;
 
 public class Fibonacciother {
     public static int Fibonacciother(int n) {
