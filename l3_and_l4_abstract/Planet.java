@@ -6,4 +6,5 @@ public class Planet extends SpaceObject {
         super();
         this.typeOfObject = "Planet";
         System.out.println("Planet(w, v, t , w)");
-        }}
+    }
+}

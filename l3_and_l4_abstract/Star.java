@@ -1,4 +1,4 @@
-package L3_and_L4_abstract;
+package l3_and_l4_abstract;
 
 public class Star extends SpaceObject {
 
@@ -6,4 +6,5 @@ public class Star extends SpaceObject {
         super();
         this.typeOfObject = "Star";
         System.out.println("Star (w, v, t , w)");
-    }}
+    }
+}
