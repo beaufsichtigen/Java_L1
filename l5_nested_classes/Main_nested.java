@@ -15,9 +15,9 @@ public class Main_nested {
         Inner_Friend.Address address = Vasya.new Address("Portugal", "Lissboa", "25April", 24, 1);
         System.out.println(String.format("%s, %s, %s", Vasya, birthday, address));
 
-     // Custom_Friend New_era_Friend = new Custom_Friend (2, "Кто-то");
-      // Custom_Friend.Custom_birthday New_day = new Custom_Friend.Custom_birthday(5,3,3000);
-      // System.out.println(String.format("%s, %s", New_era_Friend, New_day));
+        // Custom_Friend New_era_Friend = new Custom_Friend (2, "Кто-то");
+        // Custom_Friend.Custom_birthday New_day = new Custom_Friend.Custom_birthday(5,3,3000);
+        // System.out.println(String.format("%s, %s", New_era_Friend, New_day));
 
         // NESTED STATIC CLASS
 
@@ -27,7 +27,7 @@ public class Main_nested {
         Nested_static_class Neighbour = new Nested_static_class(2, "Kolya", 42);
         Nested_static_class Sister = new Nested_static_class(2, "Lena", 51);
         Nested_static_class.NameComparator nameComparator = new Nested_static_class.NameComparator();
-        Nested_static_class.AgeComparator ageComparator  = new Nested_static_class.AgeComparator();
+        Nested_static_class.AgeComparator ageComparator = new Nested_static_class.AgeComparator();
 
         System.out.println(nameComparator.compare(Chel, Neighbour));
         System.out.println(nameComparator.compare(Chel, Sister));
@@ -40,15 +40,6 @@ public class Main_nested {
         // ANONYMOUS CLASS
 
 
-
-
-
-
-
-
-
-
-
     }
 
-    }
+}

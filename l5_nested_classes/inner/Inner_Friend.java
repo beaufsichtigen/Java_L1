@@ -6,10 +6,7 @@ public class Inner_Friend {
 
     @Override
     public String toString() {
-        return "Inner_Friend{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
+        return "Inner_Friend{" + "id=" + id + ", name='" + name + '\'' + '}';
     }
 
     public Inner_Friend() {
@@ -34,11 +31,7 @@ public class Inner_Friend {
 
         @Override
         public String toString() {
-            return "Birthday{" +
-                    "dateOfBirth=" + dateOfBirth +
-                    ", monthOfBirth=" + monthOfBirth +
-                    ", yearOfBirth=" + yearOfBirth +
-                    '}';
+            return "Birthday{" + "dateOfBirth=" + dateOfBirth + ", monthOfBirth=" + monthOfBirth + ", yearOfBirth=" + yearOfBirth + '}';
         }
 
         public Birthday(int dateOfBirth, int monthOfBirth, int yearOfBirth) {
@@ -59,13 +52,7 @@ public class Inner_Friend {
 
         @Override
         public String toString() {
-            return "Address{" +
-                    "country='" + country + '\'' +
-                    ", city='" + city + '\'' +
-                    ", street='" + street + '\'' +
-                    ", building=" + building +
-                    ", apartment=" + apartment +
-                    '}';
+            return "Address{" + "country='" + country + '\'' + ", city='" + city + '\'' + ", street='" + street + '\'' + ", building=" + building + ", apartment=" + apartment + '}';
         }
 
         public Address(String country, String city, String street, int building, int apartment) {

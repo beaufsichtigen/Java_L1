@@ -1,9 +1,9 @@
 package l5_nested_classes.nested_static;
 
 public class Nested_static_class {
-        private int id;
-        private String name;
-        private int age;
+    private int id;
+    private String name;
+    private int age;
 
     public Nested_static_class(int id, String name, int age) {
         this.id = id;
