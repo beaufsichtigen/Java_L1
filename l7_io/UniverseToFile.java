@@ -15,7 +15,7 @@ public class UniverseToFile {
     private SpaceObject Neptun;
     private SpaceObject OneMoreLevel;
 
-    public UniverseToFile()  {
+    public UniverseToFile() {
         Sun = new Star();
         Sun.setName("Sun");
         Sun.setWeight(332940);
@@ -44,14 +44,14 @@ public class UniverseToFile {
         OneMoreLevel.setWell_known(true);
 
         try (ObjectOutputStream out = new ObjectOutputStream(
-                new FileOutputStream("C:\\data\\projects\\Java_L1\\files\\planets.txt", true))) {
+                new FileOutputStream("C:\\data\\projects\\Java_L1\\files\\planets.txt"))) {
 //            Star Sun = new Star();
 //            Sun.setName("Sun");
 //            Sun.setWeight(332940);
 //            Sun.setVolume(1301019);
 //            Sun.setWell_known(true);
             //out.writeObject(Sun);
-            out.writeObject(Neptun);
+            out.writeObject(new SpaceObject[]{Sun, SiriusA, Earth});
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -60,43 +60,10 @@ public class UniverseToFile {
 
 //
 //    }
-//    public String toString () {
-//        return "Known Universe:" +
-//                Sun.getName() + ":" + Sun.getWeight() + " земных масс," + Sun.getVolume() + " земных объемов," + "тип " + Sun.typeOfObject + " " + Sun.getWell_known() + "\n" +
-//                SiriusA.getName() + ":" + SiriusA.getWeight() + " земных масс," + SiriusA.getVolume() + " земных объемов," + "тип " + SiriusA.typeOfObject + " " + SiriusA.getWell_known() + "\n" +
-//                Earth.getName() + ":" + Earth.getWeight() + " земных масс," + Earth.getVolume() + " земных объемов," + "тип " + Earth.typeOfObject + " " + Earth.getWell_known() + "\n" +
-//                Neptun.getName() + ":" + Neptun.getWeight() + " земных масс," + Neptun.getVolume() + " земных объемов," + "тип " + Neptun.typeOfObject + " " + Neptun.getWell_known() + "\n" +
-//                OneMoreLevel.getName() + ":" + OneMoreLevel.getWeight() + " земных масс," + OneMoreLevel.getVolume() + " земных объемов," + "тип " + " " + OneMoreLevel.typeOfObject + OneMoreLevel.getWell_known() + "\n";
-//    }
+//
 
 //    public static void main(String[] args) {
 //        UniverseToFile MyUniverse = new UniverseToFile();
 //        System.out.println(MyUniverse.toString());
-   }
+    }
 }
-
-
-
-
-
-
-
-
-
-//        String s = String.format(
-//            "Known Universe:" +
-//                    Sun.getName() + ":" + Sun.getWeight() + "земных масс," + Sun.getVolume() + "земных объемов," + "тип" + Sun.typeOfObject + Sun.getWell_known() + "\n" +
-//                    SiriusA.getName() + ":" + SiriusA.getWeight() + "земных масс," + SiriusA.getVolume() + "земных объемов," + "тип" + SiriusA.typeOfObject + SiriusA.getWell_known() + "\n" +
-//                    Earth.getName() + ":" + Earth.getWeight() + "земных масс," + Earth.getVolume() + "земных объемов," + "тип" + Earth.typeOfObject + Earth.getWell_known() + "\n" +
-//                    Neptun.getName() + ":" + Neptun.getWeight() + "земных масс," + Neptun.getVolume() + "земных объемов," + "тип" + Neptun.typeOfObject + Neptun.getWell_known() + "\n" +
-//                    OneMoreLevel.getName() + ":" + OneMoreLevel.getWeight() + "земных масс," + OneMoreLevel.getVolume() + "земных объемов," + "тип" + OneMoreLevel.typeOfObject + OneMoreLevel.getWell_known() + "\n");
-//            return s;
-
-
-   // public String toString() {
-    //    return "Known Universe:" +
-    //            Sun.getName() + ":" + Sun.getWeight() + "земных масс," + Sun.getVolume() + "земных объемов," + "тип" + Sun.typeOfObject + Sun.getWell_known() + "\n" +
-    //            SiriusA.getName() + ":" + SiriusA.getWeight() + "земных масс," + SiriusA.getVolume() + "земных объемов," + "тип" + SiriusA.typeOfObject + SiriusA.getWell_known() + "\n" +
-    //            Earth.getName() + ":" + Earth.getWeight() + "земных масс," + Earth.getVolume() + "земных объемов," + "тип" + Earth.typeOfObject + Earth.getWell_known() + "\n" +
-    //            Neptun.getName() + ":" + Neptun.getWeight() + "земных масс," + Neptun.getVolume() + "земных объемов," + "тип" + Neptun.typeOfObject + Neptun.getWell_known() + "\n" +
-    //            OneMoreLevel.getName() + ":" + OneMoreLevel.getWeight() + "земных масс," + OneMoreLevel.getVolume() + "земных объемов," + "тип" + OneMoreLevel.typeOfObject + OneMoreLevel.getWell_known() + "\n";
