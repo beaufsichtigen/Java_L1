@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class ReadUniverse {
+public class ReadUniverse_donttouch {
     //public ReadUniverse() {
 
     void ReadUniverse(String path) throws IOException {
