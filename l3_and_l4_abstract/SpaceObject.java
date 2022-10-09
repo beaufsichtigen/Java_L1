@@ -1,10 +1,12 @@
 package l3_and_l4_abstract;
 
-public abstract class SpaceObject {
+import java.io.Serializable;
+
+public abstract class SpaceObject implements Serializable  {
     final public static int speed_of_light = 299792458; //м*с^-1
     final public static float gravity = 6.67430F; //(15)⋅10−11 м3·с−2·кг−1
     public static String not_well_known = "Загадочное место";
-    public static String yes_well_known = "Отлично изучено";
+    public static String yes_well_known = "Хорошо известен";
 
 
     private int Volume = 0;
@@ -64,7 +66,7 @@ public abstract class SpaceObject {
         this.name = name;
     }
 
-    protected SpaceObject() {
+    public SpaceObject() {
         System.out.println("Space object (w, v)");
         // this.name = name;
         // this.Weight = Weight;
@@ -72,4 +74,15 @@ public abstract class SpaceObject {
         // this.typeOfObject = typeOfObject;
         // this.well_known = well_known;
     }
-}
+    @Override
+    public String toString(){
+        return "Космический объект {" +
+                "Имя =" + name +
+                " Объем = " + Volume + "земных объемов" +
+                " , вес " + Weight + "земных масс" +
+                " , тип объекта: " + typeOfObject +
+                " , хорошо известен: " + getWell_known() + "}"; }
+
+
+    }
+
