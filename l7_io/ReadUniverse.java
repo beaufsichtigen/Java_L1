@@ -5,7 +5,7 @@ import l3_and_l4_abstract.SpaceObject;
 import java.io.*;
 
 public class ReadUniverse {
-    ReadUniverse(String path) throws IOException {
+    public ReadUniverse(String path) throws IOException {
 
         ObjectInputStream objectOfUniverse = null;
 
