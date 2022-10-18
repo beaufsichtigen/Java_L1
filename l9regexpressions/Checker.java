@@ -8,10 +8,11 @@ import java.util.Scanner;
 
 public class Checker {
 
-        public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
 
 
-            try {Scanner scanner = new Scanner(System.in);
+        try {
+            Scanner scanner = new Scanner(System.in);
 
             while (scanner.hasNext()) {
                 switch (scanner.nextInt()) {
@@ -35,10 +36,10 @@ public class Checker {
 
                         break;
 
-                        case 4:
-                            System.out.println("Enter date in format (2022-Oct-17)");
-                            String date = scanner.next();
-                            DateChecker dateChecker = new DateChecker(date);
+                    case 4:
+                        System.out.println("Enter date in format (2022-Oct-17)");
+                        String date = scanner.next();
+                        DateChecker dateChecker = new DateChecker(date);
                         break;
 
                     case 5:
@@ -56,10 +57,11 @@ public class Checker {
                                 "Input '5' for Quit.");
 
                 }
-            }} catch (InputMismatchException e) {
-                System.out.println("Incorrect input. No spaces please " + e);
-
             }
+        } catch (InputMismatchException e) {
+            System.out.println("Incorrect input. No spaces please " + e);
 
         }
+
     }
+}
