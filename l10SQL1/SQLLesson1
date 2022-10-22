@@ -1,0 +1,117 @@
+-- 1. Create 3 tables with references
+
+CREATE TABLE clients (
+client_id int NOT NULL CONSTRAINT clients_pk PRIMARY KEY,
+client_name varchar(100) NOT NULL,
+client_phone bigint);
+
+CREATE TABLE books (
+book_id int NOT NULL CONSTRAINT book_pk PRIMARY KEY,
+book_name varchar(100) NOT NULL,
+book_authtor varchar(100) NOT NULL,
+books_year date NOT NULL);
+
+CREATE TABLE orders (
+order_id int NOT NULL CONSTRAINT order_pk PRIMARY KEY,
+client_id int NOT NULL references clients (client_id),
+order_date date NOT NULL,
+ordered_book_id int NOT NULL references books (book_id),
+quantity int);
+
+-- 2. Create insert script
+
+INSERT INTO books(book_id, book_name, book_authtor, books_year)
+VALUES
+(1, 'Pena Dney', 'Boris Vian', '1947-03-20'),
+(2, 'Der Name der Rose', 'Umberto Eco', '1980-06-01'),
+(3, 'Way Station', 'Clifford Simak', '1963-06-01');
+
+Select * from books;
+
+INSERT INTO clients(client_id, client_name, client_phone)
+VALUES
+(1, 'Sanya', 88888888889),
+(2, 'Petr', 88887888889),
+(3, 'John', 88888888888),
+(4, 'Katya', 88888888889),
+(5, 'Tanya', 88887888889),
+(6, 'John', 89990009988),
+(7, 'Sanya', 53566637),
+(8, 'Petr', 9988857766),
+(9, 'John', 77663666),
+(10, 'Sanya', 88888888889),
+(11, 'Petr', 88887888889),
+(12, 'John', 44444),
+(13, 'Sanya', 88888888889),
+(14, 'Petr', 94988847),
+(15, 'John', 77476665);
+
+Select * from clients;
+
+INSERT INTO orders(order_id, client_id, order_date, ordered_book_id, quantity)
+VALUES
+(1, 1, '2022-03-20', 1, 5),
+(2, 2, '2020-05-20', 2, 10),
+(3, 3, '2020-06-20', 3, 2),
+(4, 3, '2020-06-20', 2, 10),
+(5, 15, '2022-03-20', 1, 5),
+(6, 2, '2020-05-20', 2, 10),
+(7, 3, '2020-06-20', 3, 2),
+(8, 3, '1980-06-20', 2, 10),
+(9, 5, '1999-03-20', 1, 5),
+(10, 6, '2020-05-20', 2, 10),
+(11, 3, '2020-06-20', 3, 2),
+(12, 3, '2020-06-20', 2, 10);
+
+Select * from orders;
+
+-- 3. Create update script
+
+UPDATE orders
+SET order_date = '2022-05-20'
+WHERE order_date > '2021-05-20';
+
+-- 4. Create delete script to delete dy specific column
+
+DELETE from orders
+where client_id = 3 and ordered_book_id < 5;
+
+-- 5. Create delete script to delete all
+
+DELETE from orders;
+
+-- 6. Create script to get records using between/in/like
+
+SELECT *
+FROM orders
+WHERE client_id IN (1,2) and order_date BETWEEN '2020-04-15' and '2020-05-20';
+
+SELECT *
+FROM clients
+WHERE client_name LIKE '%ya';
+
+-- 7. Create  script to get records from all 3 tables
+
+SELECT
+orders.order_id,
+orders.client_id AS client_id,
+clients.client_id AS client_id_from_client,
+orders.order_date,
+orders.ordered_book_id,
+orders.quantity,
+clients.client_name,
+books.book_name
+FROM orders
+LEFT JOIN clients ON orders.client_id = clients.client_id
+LEFT JOIN books ON orders.ordered_book_id = books.book_id
+ORDER BY orders.client_id;
+
+-- 8. Count amount af records
+SELECT COUNT (order_id) AS amount FROM orders;
+
+-- 9. Any aggregated function
+SELECT
+AVG (quantity) as average_quantity,
+MAX (quantity) AS maximum_quantity,
+MIN (quantity) AS minimum_quantity
+FROM orders;
