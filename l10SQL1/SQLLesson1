@@ -106,8 +106,12 @@ LEFT JOIN clients ON orders.client_id = clients.client_id
 LEFT JOIN books ON orders.ordered_book_id = books.book_id
 ORDER BY orders.client_id;
 
--- 8. Count amount af records
-SELECT COUNT (order_id) AS amount FROM orders;
+-- 8. Count amount of records
+SELECT
+COUNT (orders.order_id) +
+(SELECT COUNT (client_id) FROM clients) +
+(SELECT COUNT (book_id) FROM books)
+AS amount FROM orders;
 
 -- 9. Any aggregated function
 SELECT
