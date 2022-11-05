@@ -8,7 +8,7 @@ client_phone bigint);
 CREATE TABLE books (
 book_id int NOT NULL CONSTRAINT book_pk PRIMARY KEY,
 book_name varchar(100) NOT NULL,
-book_authtor varchar(100) NOT NULL,
+book_author varchar(100) NOT NULL,
 books_year date NOT NULL);
 
 CREATE TABLE orders (
@@ -20,7 +20,7 @@ quantity int);
 
 -- 2. Create insert script
 
-INSERT INTO books(book_id, book_name, book_authtor, books_year)
+INSERT INTO books(book_id, book_name, book_author, books_year)
 VALUES
 (1, 'Pena Dney', 'Boris Vian', '1947-03-20'),
 (2, 'Der Name der Rose', 'Umberto Eco', '1980-06-01'),
