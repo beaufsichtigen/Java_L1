@@ -12,7 +12,7 @@ public class Connection {
             System.err.println("Driver not found");
         }
         System.out.println("Driver is registred");
-            }
+    }
 
     private static java.sql.Connection create() {
 
@@ -33,13 +33,13 @@ public class Connection {
         return conn;
     }
 
-    public static void close () {
+    public static void close() {
         if (conn != null) {
             try {
                 conn.close();
                 conn = null;
             } catch (SQLException e) {
-                System.err.println ("Error while closing the connection");
+                System.err.println("Error while closing the connection");
             }
         }
     }

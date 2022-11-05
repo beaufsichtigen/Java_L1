@@ -11,34 +11,6 @@ import java.util.List;
 
 public class GetRecordsWithBetweenIn implements DaoGetObjects<Order> {
 
-//    @Override
-//    public Order get(int id) {
-//        String sql = "SELECT * FROM orders WHERE order_id = ?";
-//        Order order = null;
-//
-//        try (PreparedStatement statement = Connection.getConnection().prepareStatement(sql)){
-//            statement.setInt(1, id);
-//            ResultSet resultSet = statement.executeQuery();
-//            System.out.println(resultSet);
-//
-//            while (resultSet.next()) {
-//                order = new Order(resultSet.getInt(1), resultSet.getInt(2), resultSet.getDate(3), resultSet.getInt(4), resultSet.getInt(5));
-//                //
-//                System.out.println(resultSet.getInt(1));
-//                System.out.println(resultSet.getInt(2));
-//                System.out.println(resultSet.getString(3));
-//            }
-//
-//
-//
-//                resultSet.close();
-//            } catch (SQLException e) {
-//                System.err.println("Exception during the Order statement execution");
-//            }
-//            Connection.close();
-//
-//            return order;
-//        }
 
     @Override
     public List<Order> getAllObjects() {
@@ -59,7 +31,7 @@ public class GetRecordsWithBetweenIn implements DaoGetObjects<Order> {
             }
             resultSetBetweenIn.close();
 
-            } catch (SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Exception during the Order statement execution");
         }
 
@@ -68,7 +40,6 @@ public class GetRecordsWithBetweenIn implements DaoGetObjects<Order> {
 
         return orders;
     }
-
 
 
 }

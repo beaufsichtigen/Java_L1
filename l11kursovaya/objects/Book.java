@@ -7,7 +7,7 @@ public class Book {
     private byte year;
 
 
-    public Book (int id, String name, String author, byte year) {
+    public Book(int id, String name, String author, byte year) {
         this.id = id;
         this.name = name;
         this.author = author;

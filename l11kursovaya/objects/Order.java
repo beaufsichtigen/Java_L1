@@ -7,7 +7,7 @@ public class Order {
     private int orderedBook;
     private int quantity;
 
-    public Order (int id, int clientId, java.sql.Date date, int orderedBook, int quantity) {
+    public Order(int id, int clientId, java.sql.Date date, int orderedBook, int quantity) {
         this.id = id;
         this.clientId = clientId;
         this.date = date;

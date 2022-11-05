@@ -5,7 +5,7 @@ public class Client {
     private String name;
     private long phone;
 
-    public Client (int id, String name, long phone) {
+    public Client(int id, String name, long phone) {
         this.id = id;
         this.name = name;
         this.phone = phone;

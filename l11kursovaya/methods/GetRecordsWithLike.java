@@ -41,7 +41,6 @@ public class GetRecordsWithLike implements DaoGetObjects<Client> {
     }
 
 
-
 }
 
 

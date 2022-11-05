@@ -10,7 +10,6 @@ import java.sql.Statement;
 public class GetAmountOfRecords implements DaoCountInt<Order> {
 
 
-
     @Override
     public int countAmount() {
 
@@ -38,7 +37,6 @@ public class GetAmountOfRecords implements DaoCountInt<Order> {
 
         return 1;
     }
-
 
 
 }

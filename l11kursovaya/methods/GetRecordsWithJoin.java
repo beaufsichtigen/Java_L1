@@ -35,7 +35,7 @@ public class GetRecordsWithJoin implements DaoGetObjects<JoinResult> {
 
             while (resultSetWithJoin.next()) {
 
-                result.add(new JoinResult (
+                result.add(new JoinResult(
                         resultSetWithJoin.getInt(1),
                         resultSetWithJoin.getInt(2),
                         resultSetWithJoin.getInt(3),
@@ -47,7 +47,7 @@ public class GetRecordsWithJoin implements DaoGetObjects<JoinResult> {
             }
             resultSetWithJoin.close();
 
-            } catch (SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Exception during the Order statement execution");
         }
 
@@ -56,7 +56,6 @@ public class GetRecordsWithJoin implements DaoGetObjects<JoinResult> {
 
         return result;
     }
-
 
 
 }

@@ -2,8 +2,6 @@ package l11kursovaya;
 
 import l11kursovaya.methods.*;
 import l6_exceptions.MyException;
-import l9regexpwithenherit.PhoneChecker;
-
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -118,31 +116,6 @@ public class Kursovaya {
 //                    MIN (quantity) AS minimum_quantity
 //                    FROM orders;
 
-                    case 11:
-                        System.out.println("Эксперименты");
-                        String phone = scanner.next();
-                        boolean checkPhoneResult = new PhoneChecker().check(phone);
-
-
-
-                        System.out.println(checkPhoneResult ? "Phone validated": "Incorrect Phone");
-
-                        break;
-
-//                    case 3:
-//                        System.out.println("Enter Book ISBN. Format ISBN-13:888-9999999999 or ISBN-10:9999999999 ");
-//                        String isbn = scanner.next();
-//                        boolean checkISBNResult = new IsbnChecker().check(isbn);
-//                        System.out.println(checkISBNResult ? "ISBN validated": "Incorrect ISBN");
-//
-//                        break;
-//
-//                    case 4:
-//                        System.out.println("Enter date in format (2022-Oct-17)");
-//                        String date = scanner.next();
-//                        boolean checkDateResult = new DateChecker().check(date);
-//                        System.out.println(checkDateResult ? "Date validated": "Incorrect Date");
-//                        break;
 
                     case 10:
                         System.out.println("Quit");

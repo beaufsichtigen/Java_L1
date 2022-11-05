@@ -1,67 +1,70 @@
 -- 1. Create 3 tables with references
 
-CREATE TABLE clients (
-client_id int NOT NULL CONSTRAINT clients_pk PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS clients (
+client_id int NOT NULL generated always as identity,
 client_name varchar(100) NOT NULL,
-client_phone bigint);
+client_phone bigint,
+PRIMARY KEY(client_id));
 
-CREATE TABLE books (
-book_id int NOT NULL CONSTRAINT book_pk PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS books (
+book_id int NOT NULL generated always as identity,
 book_name varchar(100) NOT NULL,
-book_author varchar(100) NOT NULL,
-books_year date NOT NULL);
+book_authtor varchar(100) NOT NULL,
+books_year date NOT NULL,
+PRIMARY KEY(book_id));
 
-CREATE TABLE orders (
-order_id int NOT NULL CONSTRAINT order_pk PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS orders (
+order_id int NOT NULL generated always as identity,
 client_id int NOT NULL references clients (client_id),
 order_date date NOT NULL,
 ordered_book_id int NOT NULL references books (book_id),
-quantity int);
+quantity int,
+PRIMARY KEY(order_id));
 
 -- 2. Create insert script
 
-INSERT INTO books(book_id, book_name, book_author, books_year)
+INSERT INTO books(book_name, book_author, books_year)
 VALUES
-(1, 'Pena Dney', 'Boris Vian', '1947-03-20'),
-(2, 'Der Name der Rose', 'Umberto Eco', '1980-06-01'),
-(3, 'Way Station', 'Clifford Simak', '1963-06-01');
+('Pena Dney', 'Boris Vian', '1947-03-20'),
+('Der Name der Rose', 'Umberto Eco', '1980-06-01'),
+('Way Station', 'Clifford Simak', '1963-06-01');
 
 Select * from books;
 
-INSERT INTO clients(client_id, client_name, client_phone)
+INSERT INTO clients(client_name, client_phone)
 VALUES
-(1, 'Sanya', 88888888889),
-(2, 'Petr', 88887888889),
-(3, 'John', 88888888888),
-(4, 'Katya', 88888888889),
-(5, 'Tanya', 88887888889),
-(6, 'John', 89990009988),
-(7, 'Sanya', 53566637),
-(8, 'Petr', 9988857766),
-(9, 'John', 77663666),
-(10, 'Sanya', 88888888889),
-(11, 'Petr', 88887888889),
-(12, 'John', 44444),
-(13, 'Sanya', 88888888889),
-(14, 'Petr', 94988847),
-(15, 'John', 77476665);
+('Sanya', 88888888889),
+('Petr', 88887888889),
+('John', 88888888888),
+('Katya', 88888888889),
+('Tanya', 88887888889),
+('John', 89990009988),
+('Sanya', 53566637),
+('Petr', 9988857766),
+('John', 77663666),
+('Sanya', 88888888889),
+('Petr', 88887888889),
+('John', 44444),
+('Sanya', 88888888889),
+( 'Petr', 94988847),
+('John', 77476665);
 
 Select * from clients;
 
-INSERT INTO orders(order_id, client_id, order_date, ordered_book_id, quantity)
+INSERT INTO orders(client_id, order_date, ordered_book_id, quantity)
 VALUES
-(1, 1, '2022-03-20', 1, 5),
-(2, 2, '2020-05-20', 2, 10),
-(3, 3, '2020-06-20', 3, 2),
-(4, 3, '2020-06-20', 2, 10),
-(5, 15, '2022-03-20', 1, 5),
-(6, 2, '2020-05-20', 2, 10),
-(7, 3, '2020-06-20', 3, 2),
-(8, 3, '1980-06-20', 2, 10),
-(9, 5, '1999-03-20', 1, 5),
-(10, 6, '2020-05-20', 2, 10),
-(11, 3, '2020-06-20', 3, 2),
-(12, 3, '2020-06-20', 2, 10);
+(1, '2022-03-20', 1, 5),
+(2, '2020-05-20', 2, 10),
+(3, '2020-06-20', 3, 2),
+(3, '2020-06-20', 2, 10),
+(15, '2022-03-20', 1, 5),
+(2, '2020-05-20', 2, 10),
+(3, '2020-06-20', 3, 2),
+(3, '1980-06-20', 2, 10),
+(5, '1999-03-20', 1, 5),
+(6, '2020-05-20', 2, 10),
+(3, '2020-06-20', 3, 2),
+(3, '2020-06-20', 2, 10);
 
 Select * from orders;
 
