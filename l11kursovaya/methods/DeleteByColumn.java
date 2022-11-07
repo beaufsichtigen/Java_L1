@@ -8,9 +8,9 @@ import java.sql.Statement;
 public class DeleteByColumn implements DaoUpdateWithParameter {
 
     @Override
-    public int updateTableWithParameter(String parameter) {
+    public int updateTableWithParameter(String columnName, String columnValue, String parameter3, String parameter4) {
 
-        String sql = "DELETE from orders where ordered_book_id =" + parameter + ";";
+        String sql = "DELETE from orders where " + columnName +" = " + columnValue + ";";
         System.out.println(sql);
 
 
@@ -22,7 +22,7 @@ public class DeleteByColumn implements DaoUpdateWithParameter {
             System.out.println(result);
 
         } catch (SQLException e) {
-            System.err.println("Exception deleting");
+            System.err.println("Exception while deleting");
         }
 
 

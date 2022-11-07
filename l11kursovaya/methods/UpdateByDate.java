@@ -1,23 +1,25 @@
 package l11kursovaya.methods;
 
 import l11kursovaya.Dao.DaoUpdateDelete;
+import l11kursovaya.Dao.DaoUpdateWithParameter;
 
 import java.sql.*;
 
-public class UpdateByDate implements DaoUpdateDelete {
+public class UpdateByDate implements DaoUpdateWithParameter {
 
     @Override
-    public int insertTable() {
+    public int updateTableWithParameter (String oldDate, String newDate, String parameter3, String parameter4) {
 
         int result = 0;
 
         try (Statement statement = Connection.getConnection().createStatement()) {
+            String sql = "UPDATE orders\n" +
+                    "SET order_date = '" + newDate + "'\n" +
+                    "WHERE order_date = '" + oldDate + "';";
 
-            result = statement.executeUpdate(
-                    "UPDATE orders\n" +
-                            "SET order_date = '2022-05-20'\n" +
-                            "WHERE order_date > '2021-05-20';");
+            result = statement.executeUpdate(sql);
 
+            System.out.println(sql);
             System.out.println(result + " rows updated.");
 
 
