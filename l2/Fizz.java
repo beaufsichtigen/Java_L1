@@ -1,25 +1,23 @@
 package l2;
 
 public class Fizz {
-    public static void ifFizz(int i)
-
-    {
-        int i3=(i%3);
-        int i5=(i%5);
-        if ((i3 == 0)&&(i5 == 0)) {
+    public static void ifFizz(int i) {
+        int i3 = (i % 3);
+        int i5 = (i % 5);
+        if ((i3 == 0) && (i5 == 0)) {
             System.out.println("Fizz-buzz");
-        }
-        else if (i3 == 0) {
+        } else if (i3 == 0) {
             System.out.println("Fizz");
 
-        }
-        else if (i5 == 0) {
+        } else if (i5 == 0) {
             System.out.println("Buzz");
 
+        } else {
+            System.out.println("Fignya");
         }
-        else {System.out.println("Fignya");
-    }}
-//input:
+    }
+
+    //input:
     public static void main(String[] args) {
         ifFizz(15);
     }

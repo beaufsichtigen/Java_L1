@@ -2,14 +2,17 @@ package l11kursovaya.methods;
 
 
 import l11kursovaya.Dao.DaoUpdateDelete;
-import l11kursovaya.Dao.DaoUpdateWithParameter;
+import l9regexpwithenherit.DateNewChecker;
+import l9regexpwithenherit.NumberChecker;
 
 
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Scanner;
 
 
-public class Insert implements DaoUpdateDelete, DaoUpdateWithParameter {
+public class InsertByDefault implements DaoUpdateDelete {
 
     @Override
     public int insertTable() {
@@ -78,26 +81,4 @@ public class Insert implements DaoUpdateDelete, DaoUpdateWithParameter {
     }
 
 
-    @Override
-    public int updateTableWithParameter(String clientId, String orderDate, String bookId, String quantity) {
-
-        String sql = "INSERT INTO orders (client_id, order_date, ordered_book_id, quantity) VALUES (" + clientId + ", '" + orderDate + "', " + bookId + ", " + quantity + ");";
-        System.out.println(sql);
-
-        int result = 0;
-        try (Statement statement = Connection.getConnection().createStatement()) {
-
-            result = statement.executeUpdate(sql);
-
-            System.out.println(result);
-
-        } catch (SQLException e) {
-            System.err.println("Check the values");
-        }
-
-
-        Connection.close();
-
-        return result;
-    }
 }

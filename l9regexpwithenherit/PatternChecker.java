@@ -12,5 +12,6 @@ public abstract class PatternChecker {
     public boolean check(String value2Check) {
         return CHECK_PATTERN.matcher(value2Check).find();
     }
-
+    public boolean check(int value2Check) { return CHECK_PATTERN.matcher(String.valueOf(value2Check)).find();
+    }
 }

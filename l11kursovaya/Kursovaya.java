@@ -37,8 +37,8 @@ public class Kursovaya {
                         break;
                     case 2:
                         System.out.println("Insert script, which will fill the table with default data");
-                        Insert insertDefault = new Insert();
-                        insertDefault.insertTable();
+                        InsertByDefault insertByDefaultDefault = new InsertByDefault();
+                        insertByDefaultDefault.insertTable();
                         break;
 
                    // boolean checkISBNResult = new IsbnChecker().check(isbn);
@@ -47,38 +47,9 @@ public class Kursovaya {
 
                     case 3:
                         System.out.println("Insert order manualy");
-                        Insert insertWithOwn = new Insert();
+                        InsertManually insertManually = new InsertManually();
+                        insertManually.insertTable();
 
-                        System.out.println("Please enter client_id");
-                        String clientId = (scanner.next());
-
-                        boolean clientIdcheck = new NumberChecker().check(clientId);
-                        if (clientIdcheck == false) {
-                            System.out.println("Wrong clientId format. Return to menu.");
-                            break;
-                        } else {
-                        System.out.println("Please enter order_date. For example: 2025-05-20");
-                        String orderDate = (scanner.next());
-                            boolean orderDatecheck = new DateNewChecker().check(orderDate);
-                            if (orderDatecheck == false) {
-                                System.out.println("Wrong orderDate format.Return to menu.");
-                                break;
-                            } else {
-                        System.out.println("Please enter ordered_book_id. For example: 1");
-                        String bookId = (scanner.next());
-                                boolean bookIdcheck = new NumberChecker().check(bookId);
-                                if (bookIdcheck == false) {
-                                    System.out.println("Wrong bookId format. Return to menu.");
-                                    break;
-                                } else {
-                        System.out.println("Please enter quantity");
-                        String quantity = (scanner.next());
-                                    boolean quantitycheck = new NumberChecker().check(quantity);
-                                    if (quantitycheck == false) {
-                                        System.out.println("Wrong quantity format. Return to menu.");
-                                        break;
-                                    } else {
-                        insertWithOwn.updateTableWithParameter(clientId, orderDate, bookId, quantity);}}}}
                         break;
 
                     case 4:
