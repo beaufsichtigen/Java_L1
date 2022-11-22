@@ -2,10 +2,11 @@ package l11kursovaya.methods;
 
 
 import l11kursovaya.Dao.DaoUpdateDelete;
+import l11kursovaya.Kursovaya;
 import l6_exceptions.MyException;
 import l9regexpwithenherit.DateNewChecker;
 import l9regexpwithenherit.NumberChecker;
-import org.apache.logging.log4j.core.Logger;
+import org.apache.log4j.Logger;
 
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -15,6 +16,7 @@ import java.util.Scanner;
 
 public class InsertManually implements DaoUpdateDelete {
 
+    private static final Logger LOGGER = Logger.getLogger(InsertManually.class);
     @Override
 
     public int insertTable() {
@@ -48,7 +50,6 @@ public class InsertManually implements DaoUpdateDelete {
 
             }
         }
-
 
 
         System.out.println("Please enter order_date. For example: 2025-05-20");
@@ -88,11 +89,11 @@ i = 0;
             statement1.setInt(3, Integer.parseInt(bookId));
             statement1.setInt(4, Integer.parseInt(quantity));
 
-            System.out.println(statement1);
 
             result = statement1.executeUpdate();
 
-            System.out.println("Rows added: " + result);
+            LOGGER.debug(statement1);
+            LOGGER.debug("Rows added: " + result);
 
         } catch (SQLException e) {
             System.err.println("Check the values" + e);

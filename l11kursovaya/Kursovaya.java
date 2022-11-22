@@ -5,12 +5,14 @@ import l6_exceptions.MyException;
 import l9regexpwithenherit.DateNewChecker;
 import l9regexpwithenherit.FieldChecker;
 import l9regexpwithenherit.NumberChecker;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Kursovaya {
 
+    private static final Logger LOGGER = Logger.getLogger(Kursovaya.class);
     public static void main(String[] args) throws IOException {
         System.out.println("Input '1' for Create 3 tables with references. \n" +
                 "Input '2' for Script, which will fill the table with default data. \n" +
@@ -34,6 +36,7 @@ public class Kursovaya {
                         System.out.println("Create 3 tables with references");
                         CreateTables createTables = new CreateTables();
                         createTables.createTable();
+                        LOGGER.info("Логгер сработал");
                         break;
                     case 2:
                         System.out.println("Insert script, which will fill the table with default data");

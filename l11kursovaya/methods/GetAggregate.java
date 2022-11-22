@@ -2,6 +2,7 @@ package l11kursovaya.methods;
 
 import l11kursovaya.Dao.DaoCountInt;
 import l11kursovaya.objects.Order;
+import org.apache.log4j.Logger;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
